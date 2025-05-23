@@ -100,8 +100,5 @@ class Bot(Client):
                 yield message
                 current += 1
 
-
 app = Bot()
-
-if __name__ == "__main__":
-    app.run()
+app.run()
