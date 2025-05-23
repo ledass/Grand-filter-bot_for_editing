@@ -1,5 +1,6 @@
 import logging
 import logging.config
+from pyrogram import Client
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
@@ -101,4 +102,7 @@ class Bot(Client):
 
 
 app = Bot()
-app.run()
+app = Client("my_bot")
+
+if __name__ == "__main__":
+    app.run()
