@@ -102,7 +102,6 @@ class Bot(Client):
 
 
 app = Bot()
-app = Client("my_bot")
 
 if __name__ == "__main__":
     app.run()
