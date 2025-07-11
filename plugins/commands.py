@@ -390,6 +390,18 @@ async def help_cb(bot, query):
         help_msg = HELPMSG
     await query.message.edit_text(help_msg, reply_markup=HELP_KB)
 
+@Client.on_callback_query(filters.regex(r"^back_m$"))
+async def back(bot, query):
+    user_id = query.from_user.id
+    name = query.from_user.first_name if query.from_user.first_name else " "
+    try:
+        start_msg = START_MSG.format(name, user_id)
+    except Exception as e:
+        LOGGER.warning(e)
+        start_msg = STARTMSG
+    await query.message.edit_text(start_msg, reply_markup=START_TXT)
+    
+
 
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
