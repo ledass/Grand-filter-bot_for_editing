@@ -39,7 +39,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[            
-            InlineKeyboardButton('🆘 Help ', callback_data='help'),
+            InlineKeyboardButton('🆘 Help ', callback_data='help_cb'),
             InlineKeyboardButton('👨‍💻 Source Code', url=f"https://t.me/+QbWh1eEL0v4wM2Zl")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -80,7 +80,7 @@ async def start(client, message):
         
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[            
-            InlineKeyboardButton('🆘 Help ', callback_data='help'),
+            InlineKeyboardButton('🆘 Help ', callback_data='help_cb'),
             InlineKeyboardButton('👨‍💻 Source Code', url=f"https://t.me/+QbWh1eEL0v4wM2Zl")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -379,6 +379,16 @@ async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
     await message.answer('Piracy Is Crime')
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
+    
+
+@Client.on_callback_query(filters.regex(r"^help_cb$"))
+async def help_cb(bot, query):
+    try:
+        help_msg = HELP_MSG
+    except Exception as e:
+        LOGGER.warning(e)
+        help_msg = HELPMSG
+    await query.message.edit_text(help_msg, reply_markup=HELP_KB)
 
 
 @Client.on_message(filters.command('settings'))
