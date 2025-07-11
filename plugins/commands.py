@@ -120,7 +120,7 @@ async def start(client, message):
                 file_id=file.file_id,
                 caption=f_caption,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ 𝖦𝗋𝖺𝗇𝖽 𝖢𝗂𝗇𝖾𝗆𝖺𝗌 ⚓️', url="https://t.me/grandcinemas") ] ] ),
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ MC CINEMAS  ⚓️', url="https://t.me/+5iw_dWArjYg2YTBl") ] ] ),
             )
         return
     
@@ -156,7 +156,7 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ 𝖦𝗋𝖺𝗇𝖽 𝖢𝗂𝗇𝖾𝗆𝖺𝗌 ⚓️', url="https://t.me/grandcinemas") ] ] ),
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ MC CINEMAS  ⚓️', url="https://t.me/+5iw_dWArjYg2YTBl") ] ] ),
                     
                 )
             except FloodWait as e:
@@ -167,7 +167,7 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ 𝖦𝗋𝖺𝗇𝖽 𝖢𝗂𝗇𝖾𝗆𝖺𝗌 ⚓️', url="https://t.me/grandcinemas") ] ] ),
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ MC CINEMAS  ⚓️', url="https://t.me/+5iw_dWArjYg2YTBl") ] ] ),
                 )
             except Exception as e:
                 logger.warning(e, exc_info=True)
@@ -229,7 +229,7 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ 𝖦𝗋𝖺𝗇𝖽 𝖢𝗂𝗇𝖾𝗆𝖺𝗌 ⚓️', url="https://t.me/grandcinemas") ] ] ),
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ MC CINEMAS  ⚓️', url="https://t.me/+5iw_dWArjYg2YTBl") ] ] ),
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
@@ -263,7 +263,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ 𝖦𝗋𝖺𝗇𝖽 𝖢𝗂𝗇𝖾𝗆𝖺𝗌 ⚓️', url="https://t.me/grandcinemas") ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚓️ MC CINEMAS  ⚓️', url="https://t.me/+5iw_dWArjYg2YTBl") ] ] ),
     )
                     
 
