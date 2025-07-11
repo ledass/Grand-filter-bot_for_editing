@@ -1,3 +1,5 @@
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 class script(object):
     START_TXT = """<b>𝖧𝖾𝗅𝗅𝗈.... {} 💖
 
