@@ -1,3 +1,5 @@
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 HELP_MSG = """
 **You can find the bot commands here.**
 **User Commands:-**
