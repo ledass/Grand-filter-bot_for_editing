@@ -32,5 +32,5 @@ HELP_KB = InlineKeyboardMarkup(
             InlineKeyboardButton("🔙 Back", callback_data="back_m"),
         ],
     ]
-
+)
 
