@@ -34,3 +34,14 @@ HELP_KB = InlineKeyboardMarkup(
     ]
 )
 
+START_KB = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton("🆘 Help", callback_data="help_cb"),
+            InlineKeyboardButton(
+                "👨‍💻 Source Code", url="https://t.me/+QbWh1eEL0v4wM2Zl"
+            ),
+        ]
+    ]
+)
+
