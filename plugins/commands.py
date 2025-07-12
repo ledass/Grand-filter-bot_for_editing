@@ -397,7 +397,7 @@ async def back(bot, query):
     user_id = query.from_user.id
     name = query.from_user.first_name if query.from_user.first_name else " "
     try:
-        start_msg = START_MSG.format(name, user_id)
+        start_msg = START_TXT.format(name, user_id)
     except Exception as e:
         LOGGER.warning(e)
         start_msg = STARTMSG
